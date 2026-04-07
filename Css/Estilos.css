@@ -1,0 +1,730 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFCFB;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: linear-gradient(135deg, #4ac5d4, #38b0c0) !important;
+    backdrop-filter: blur(8px);
+    padding: 10px 0;
+    transition: all 0.3s ease;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ================= LOGO ================= */
+
+.LogoMenu {
+    width: 42px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.LogoMenu:hover {
+    transform: scale(1.05);
+}
+
+/* ================= ICONO HAMBURGUESA ================= */
+
+nav i {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+nav i:hover {
+    opacity: 0.8;
+}
+
+/* ================= MENÚ ================= */
+
+.BarraMenu {
+    gap: 20px;
+}
+
+.LetraMenu {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: white !important;
+    position: relative;
+    padding: 5px 8px;
+    transition: all 0.3s ease;
+}
+
+/* Línea animada elegante */
+.LetraMenu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.LetraMenu:hover::after {
+    width: 100%;
+}
+
+/* ================= BOTÓN LOGIN ================= */
+/* BOTÓN LOGIN CORPORATIVO */
+.btn-login {
+    background: #38b0c0 !important;
+    /* sólido */
+    color: #ffffff !important;
+    /* color principal */
+    border: 1px solid #ffffff !important;
+    border-radius: 6px !important;
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: all 0.25s ease !important;
+}
+
+/* Icono */
+.btn-login i {
+    font-size: 14px;
+}
+
+/* Hover elegante */
+.btn-login:hover {
+    background: #38b0c0 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Click */
+.btn-login:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-login {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1030;
+        box-shadow: 0px 10px 26px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .BarraMenu {
+        text-align: center;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .LetraMenu {
+        display: block;
+        padding: 10px;
+    }
+
+    .btn-login {
+        margin-top: 10px;
+    }
+}
+
+
+/* Fondo Banner */
+
+#intro {
+    background-image: url("../Img/Banner7.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+/*
+.mas {
+    background-color: rgba(33, 147, 175, 0.25);
+    backdrop-filter: blur(0px);
+}
+*/
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #intro {
+        margin-top: 0;
+    }
+}
+
+/* Cuando se colapsa en móvil (menú desplegado) */
+@media (max-width: 991.98px) {
+
+    nav {
+        background-color: #049fbad7;
+    }
+
+    .LogoText strong {
+        color: #fff;
+    }
+
+    .Hamburguesa {
+        color: #fff;
+    }
+
+    .navbar-nav {
+        gap: 0 !important;
+    }
+
+    .navbar-collapse .nav-link {
+        color: #fff !important;
+        font-weight: 450;
+        padding-left: 15px;
+        /* Enlaces blancos para que contrasten */
+    }
+}
+
+.TextoBanner {
+    margin-top: 130px;
+    padding: 15px 15px 15px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.TextoBanner h2 {
+    color: #2f3e3b;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.TextoBanner h5 {
+    color: #2f3e3b;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.btn-Estilo1 {
+    background-color: #049eba;
+    color: #fff;
+    border-radius: 30px;
+    padding: 12px 28px;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-Estilo2 {
+    background-color: transparent;
+    color: #049eba;
+    border: 2px solid #049eba;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-Estilo2:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-Estilo1:hover {
+    background-color: #15b1cc;
+    transform: translateY(-2px);
+}
+
+/* Cuando se colapsa en móvil (menú desplegado) */
+@media (max-width: 991.98px) {
+
+    .TextoBanner {
+        margin-top: 100px;
+        background-color: rgba(255, 255, 255, 0.63);
+        backdrop-filter: blur(0px);
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+}
+
+
+/*  Tarjeta  */
+
+.SeccionCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.CardMover {
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 25px !important;
+    background-color: #f5f2ed;
+    position: absolute;
+    top: -80px;
+    box-shadow: 0px 10px 41px -12px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 41px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 41px -12px rgba(0, 0, 0, 0.75);
+}
+
+
+.CardImg {
+    background-image: url("../Img/FotoCard3.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
+    border-radius: 25px 0 0 25px;
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.CardText p {
+    text-align: justify;
+}
+
+.CardText b {
+    color: #049eba;
+}
+
+.BtnCard {
+    background-color: #049eba;
+    /* turquesa oscuro */
+    color: #ffffff;
+
+    border-radius: 30px;
+    padding: 12px 36px;
+    width: fit-content;
+    min-height: 48px;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+
+.BtnCard:hover {
+    background-color: #1cadc7;
+    /* hover más profundo */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(47, 127, 122, 0.35);
+}
+
+
+.TitulosGrandes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.TitulosGrandes h3 {
+    color: black;
+}
+
+
+@media (max-width: 991.98px) {
+    .CardMover {
+        max-height: 800px;
+    }
+
+    .CardImg {
+        border-radius: 25px 25px 0 0;
+    }
+
+    .CardText {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
+
+/* Demas tarjetas */
+
+
+
+
+.FondoCards {
+    background-color: #f5f2ed;
+    /* fondo crema claro */
+    padding: 30px 0;
+}
+
+.TitulosGrandes {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.TitulosGrandes h5 {
+    color: #3b3b3b;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.TitulosGrandes h3 {
+    color: #2f3e3b;
+    font-weight: 600;
+}
+
+.TitulosGrandes b {
+    color: #049eba;
+    /* turquesa oscuro */
+}
+
+
+
+
+.ContenedorTarjetas {
+    width: 100%;
+    padding: 50px;
+}
+
+
+
+.ImgCards {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: none;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.ImgCards:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.ImgCards::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: #049eba;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+}
+
+
+
+.ImgCards img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.ImgCards .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #049eba;
+}
+
+.ImgCards .card-text {
+    font-size: 0.9rem;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .ImgCards img {
+        height: 180px;
+    }
+}
+
+
+
+/* Contactos */
+
+
+.SeccionContactos {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.Contactos {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    text-align: justify;
+    grid-area: 15px;
+}
+
+.Contactos h5 {
+    color: #475150;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.Contactos h1 {
+    color: #049eba;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.Contactos p {
+    color: #475150;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+
+.BtnContactos {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.BtnContactos a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.BtnContactos i {
+    font-size: 18px;
+}
+
+/* WhatsApp y Teléfono */
+
+.btn-Cell {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #049eba, #138ca1);
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.btn-Cell:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.btnCorreo {
+    background-color: #475150;
+    padding: 10px 15px;
+    border-radius: 25px;
+    width: 348px;
+    height: 50px;
+}
+
+.btnCorreo:hover {
+    background-color: #3b4443;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.Correo {
+    width: 420px;
+    background: #38b0c0;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(47, 143, 139, 0.25);
+}
+
+
+.Correo h4 {
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--verde-lotus);
+    box-shadow: 0 0 0 2px rgba(111, 169, 140, 0.25);
+}
+
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 12px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Botón enviar */
+.btn-submit {
+    width: 100%;
+    background: #fff;
+    color: #049eba;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .SeccionContactos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Contactos,
+    .Correo {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .BtnContactos a {
+        width: 100%;
+    }
+}
+
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    background-color: #015e6e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.ContenedorFooter {
+    padding: 50px 80px 0px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.TextFooter {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-style: normal !important;
+    font-size: 18px !important;
+}
+
+.footer-col h2,
+.footer-col h3 {
+    color: #fff;
+    /* Color dorado/beige elegante */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-col h2 {
+    font-size: 15px;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+.footer-col p {
+    width: 400px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+    text-align: justify;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #2bbec4;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #000;
+    font-size: 13px;
+    color: #ccc;
+}

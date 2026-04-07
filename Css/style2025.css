@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.fondo-azul {
+    position: absolute;
+    top: 58px;
+    /* debajo del navbar */
+    left: 0;
+    width: 100%;
+    height: 150px;
+    /* ajusta hasta la mitad de la card Sales */
+    background-image: url("../Img/FondoLogin.jpg");
+    background-repeat: no-repeat;
+    z-index: 0;
+    /* queda detrás */
+}
+
+
+.LogoMenu {
+    padding: 0 8px;
+}
+
+.LogoSplendor {
+    height: 35px;
+}
+
+.TituloBienv {
+    color: #006f75;
+    font-size: 20px;
+}
+
+@media (min-width: 991.98px) {
+    main {
+        padding-left: 240px;
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0;
+    /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .TituloBienv {
+        font-size: 16px;
+    }
+
+
+    .LogoSplendor {
+        height: 30px !important;
+    }
+}
+
+.sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+.BotonMiCuenta {
+    border: 1px solid #005a5f;
+    border-radius: 8px;
+    padding: 0 5px 0 5px;
+}
+
+.NomMiCuenta {
+    color: #005a5f;
+    padding: 0 0 0 8px;
+}
+
+.DatosAdmi {
+    padding: 15px 15px 0 15px;
+    margin-bottom: 8px;
+}
+
+.publica {
+    width: 100%;
+    /* Ocupa todo el ancho de la card */
+    max-width: 500px;
+    /* Tamaño máximo tipo red social */
+    border-radius: 10px;
+    object-fit: cover;
+    /* Recorta si la imagen es más grande */
+}
+
+.pagina {
+    border: 0px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginali {
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+.paginali a {
+    color: #5c5c5c !important;
+}
+
+
+.OpcionMenu {
+    margin: 3px 0;
+}
+
+.OpcionMenu:hover {
+    border-radius: 5px !important;
+    background-color: #2991b7 !important;
+    color: white !important;
+    transition: none;
+}
+
+.ColorFooter {
+    background-color: #2991b7;
+    color: white;
+}
+
+.ColorFooter a {
+    color: rgb(214, 214, 214) !important;
+}
+
+.contenercitas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* 👈 uno a la izquierda y otro a la derecha */
+    align-items: center;
+    /* Centrado vertical */
+}
+
+.EstiloLetraTarjeta {
+    font: normal 32px 'Prata', serif;
+    font-weight: 600;
+}
+
+.BtnRegistrar {
+    color: white;
+    border-radius: 5px;
+    background-color: #006F75;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ------------ Full Calendario ---------------- */
+
+.fc .fc-toolbar-title {
+  text-transform: lowercase;
+}
+
+.fc .fc-toolbar-title::first-letter {
+  text-transform: uppercase;
+}
+
+/* Ajustes generales para móviles */
+@media (max-width: 768px) {
+  /* Título (mes y año) más pequeño */
+  .fc .fc-toolbar-title {
+    font-size: 16px !important;
+  }
+
+  /* Botones (Hoy, Mes, Semana, Día) más compactos */
+  .fc .fc-button {
+    font-size: 12px !important;
+    padding: 4px 6px !important;
+  }
+
+  /* Celdas del calendario más compactas */
+  .fc .fc-daygrid-day-number {
+    font-size: 12px !important;
+  }
+
+  /* Cabecera (días de la semana) más pequeña */
+  .fc .fc-col-header-cell-cushion {
+    font-size: 12px !important;
+  }
+}
+
+
+
+/* --------------- Boton para Actualizar Foto del Perfil -------------- */
+
+.foto-container {
+    margin-top: 15px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Imagen circular */
+.fotoperfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Overlay */
+.overlay-foto {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;                 /* OCULTO por defecto */
+    transition: opacity 0.3s ease;
+}
+
+/* 🖥 PC: aparece SOLO con hover */
+@media (min-width: 453px) {
+    .foto-container:hover .overlay-foto {
+        opacity: 1;
+    }
+}
+
+/* 📱 MÓVIL: SIEMPRE visible */
+@media (max-width: 600px) {
+    .overlay-foto {
+        opacity: 1;             /* overlay visible */
+    }
+}
+
+
+
+
+
+
+
+
+/*    Reportes Admin      */
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.reporte-card {
+    transition: all 0.3s ease;
+}
+
+.reporte-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Foto */
+
+.avatar-menu{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0d6efd;
+}
+
+
+/* Titulo Perfil */
+
+.section-title {
+color: #006F75  !important;
+}
